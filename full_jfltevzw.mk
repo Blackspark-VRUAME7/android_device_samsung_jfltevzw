@@ -34,4 +34,37 @@ PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := SCH-I545
 
-TARGET_PREBUILT_KERNEL := device/samsung/jfltevzw/kernel
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+    LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+else
+    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel
+    
+# Prebuilt kernel modules
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/modules/ansi_cprng.ko:system/lib/modules/ansi_cprng.ko \
+    $(LOCAL_PATH)/modules/commkm.ko:system/lib/modules/commkm.ko \
+    $(LOCAL_PATH)/modules/dhd.ko:system/lib/modules/dhd.ko \
+    $(LOCAL_PATH)/modules/dma_test.ko:system/lib/modules/dma_test.ko \
+    $(LOCAL_PATH)/modules/evbug.ko:system/lib/modules/evbug.ko \
+    $(LOCAL_PATH)/modules/exfat_core.ko:system/lib/modules/exfat_core.ko \
+    $(LOCAL_PATH)/modules/exfat_fs.ko:system/lib/modules/exfat_fs.ko \
+    $(LOCAL_PATH)/modules/gspca_main.ko:system/lib/modules/gspca_main.ko \
+    $(LOCAL_PATH)/modules/mcdrvmodule.ko:system/lib/modules/mcdrvmodule.ko \
+    $(LOCAL_PATH)/modules/mckernelapi.ko:system/lib/modules/mckernelapi.ko \
+    $(LOCAL_PATH)/modules/mmc_test.ko:system/lib/modules/mmc_test.ko \
+    $(LOCAL_PATH)/modules/msm-buspm-dev.ko:system/lib/modules/msm-buspm-dev.ko \
+    $(LOCAL_PATH)/modules/mvpkm.ko:system/lib/modules/mvpkm.ko \
+    $(LOCAL_PATH)/modules/pvtcpkm.ko:system/lib/modules/pvtcpkm.ko \
+    $(LOCAL_PATH)/modules/qce40.ko:system/lib/modules/qce40.ko \
+    $(LOCAL_PATH)/modules/qcedev.ko:system/lib/modules/qcedev.ko \
+    $(LOCAL_PATH)/modules/qcrypto.ko:system/lib/modules/qcrypto.ko \
+    $(LOCAL_PATH)/modules/reset_modem.ko:system/lib/modules/reset_modem.ko \
+    $(LOCAL_PATH)/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
+    $(LOCAL_PATH)/modules/spidev.ko:system/lib/modules/spidev.ko \
+    $(LOCAL_PATH)/modules/test-iosched.ko:system/lib/modules/test-iosched.ko \
+    $(LOCAL_PATH)/modules/mali.ko:system/lib/modules/tima_debug_log.ko \
+    $(LOCAL_PATH)/modules/vpnclient.ko:system/lib/modules/wlan.ko
