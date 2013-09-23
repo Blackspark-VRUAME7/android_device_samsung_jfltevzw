@@ -34,3 +34,5 @@ TARGET_KERNEL_CONFIG         := jf_vzw_defconfig
 
 # loki
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/msm8960-common/loki
+
+TARGET_PREBUILT_KERNEL := device/samsung/jfltevzw/kernel
