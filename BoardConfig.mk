@@ -30,9 +30,13 @@
 TARGET_OTA_ASSERT_DEVICE := jfltevzw
 
 # Kernel
-TARGET_KERNEL_CONFIG         := jf_vzw_defconfig
+# TARGET_KERNEL_CONFIG         := jf_vzw_defconfig
 
 # loki
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/msm8960-common/loki
 
+# SafeStrap Required
 TARGET_PREBUILT_KERNEL := device/samsung/jfltevzw/kernel
+TARGET_QCOM_MEDIA_VARIANT := legacy
+TARGET_QCOM_DISPLAY_VARIANT := legacy
+TARGET_QCOM_AUDIO_VARIANT := legacy
