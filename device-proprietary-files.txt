@@ -1,1 +1,34 @@
-# Add device specific blobs here
+# Bins
+bin/mm-vdec-omx-test
+bin/mm-venc-omx-test720p
+bin/mm-video-driver-test
+bin/mm-video-encdrv-test
+
+# HW
+lib/hw/audio.primary.msm8960.so
+lib/hw/audio_policy.msm8960.so
+lib/hw/copybit.msm8960.so
+lib/hw/gralloc.msm8960.so
+lib/hw/hwcomposer.msm8960.so
+
+# Libs
+lib/libalsa-intf.so
+lib/libc2dcolorconvert.so
+lib/libdashplayer.so
+lib/libdivxdrmdecrypt.so
+lib/libexternal.so
+lib/libgenlock.so
+lib/libmemalloc.so
+lib/libmm-omxcore.so
+lib/libOmxAacEnc.so
+lib/libOmxAmrEnc.so
+lib/libOmxCore.so
+lib/libOmxEvrcEnc.so
+lib/libOmxQcelp13Enc.so
+lib/libOmxVdec.so
+lib/libOmxVenc.so
+lib/liboverlay.so
+lib/libqdMetaData.so
+lib/libqdutils.so
+lib/libqservice.so
+lib/libstagefrighthw.so
